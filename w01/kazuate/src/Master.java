@@ -83,5 +83,6 @@ public class Master {
             System.out.println("■Thank you for playing");
             this.endGame();
         }
+        
     }
 }
