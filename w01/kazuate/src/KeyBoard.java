@@ -4,7 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+//キーボード空の入出力を実装するテンプレートクラス
 public class KeyBoard {
+	//数字を入力する為のサブルーチン数字以外の入力や入力エラーをはじく
 	public static int inputNumber() {
 		int number;
 
@@ -23,6 +25,7 @@ public class KeyBoard {
 		return number;
 	}
 
+	//文字を入力する為のサブルーチン文字以外の入力や入力エラーをはじく
 	public static String inputString() {
 		String line;
 
