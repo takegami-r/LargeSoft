@@ -45,7 +45,7 @@ public class Master {
             this.selectContinue();
         }else{
             int difference = input - this.target;
-            System.out.println(difference+","+this.target+","+input);
+            //System.out.println("デバック用:目標との差＝"+difference+",目標の数字="+this.target+",入力された数字="+input);
             if(difference > 0){
                 System.out.println("■あなたが入力した数字は目標より大きいです．");
             }else{
@@ -83,6 +83,6 @@ public class Master {
             System.out.println("■Thank you for playing");
             this.endGame();
         }
-        
+
     }
 }
