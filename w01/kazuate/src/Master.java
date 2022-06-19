@@ -32,7 +32,7 @@ public class Master {
     //0から99までの間でランダムに目標となる数字を設定する．
     public void setTarget() {
         Random rand = new Random();
-        this.target = rand.nextInt(100);
+        this.target = rand.nextInt(90)+10;
     }
 
     //1ターンのゲームの動きを実行するサブルーチン入力を受け取り，目標までのヒントを表示し，ゲームクリアによる終了の判定も行う．
@@ -45,7 +45,7 @@ public class Master {
             this.selectContinue();
         }else{
             int difference = input - this.target;
-            System.out.println(difference+","+this.target+","+input);
+            //System.out.println("デバック用:目標との差＝"+difference+",目標の数字="+this.target+",入力された数字="+input);
             if(difference > 0){
                 System.out.println("■あなたが入力した数字は目標より大きいです．");
             }else{
@@ -69,7 +69,7 @@ public class Master {
     private void selectContinue(){
         System.out.println("■もう一度遊びますか?");
         System.out.println("■Yes:0 , No:1");
-        int input = this.player.userInput();
+        int input = KeyBoard.inputNumber();
         if(input != 0 && input != 1){
             System.out.println("■入力は0か1です．");
             this.selectContinue();
@@ -83,5 +83,6 @@ public class Master {
             System.out.println("■Thank you for playing");
             this.endGame();
         }
+
     }
 }
