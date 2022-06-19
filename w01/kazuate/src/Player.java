@@ -11,8 +11,8 @@ public class Player {
     //数当てゲームの入力を行うサブルーチン，ルールの例外入力をはじく処理も行う．
     public int userInput() {
         int userinput = KeyBoard.inputNumber();
-        if(userinput > 100 || userinput <0){
-            System .out.println("■入力は0から99までですもう一度入力してください．");
+        if(userinput >= 100 || userinput < 10){
+            System .out.println("■入力は10から99までですもう一度入力してください．");
             userinput = this.userInput();
         }
         return userinput;
